@@ -82,7 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
-                    Well, i just changed this for a commit... And changed again...
+                    Well, i just changed this for a commit... And changed again... And again...+1
                 </div>
 
                 <div class="links">
