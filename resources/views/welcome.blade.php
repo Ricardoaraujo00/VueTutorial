@@ -80,9 +80,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md" id="titulo">
                     Laravel
-                    Well, i just changed this for a commit... And changed again... And again...+1
+                    Well, i just changed this for a commit... And changed again... And again...+11
                 </div>
 
                 <div class="links">
@@ -99,3 +99,9 @@
         </div>
     </body>
 </html>
+
+
+<script>
+
+    document.getElementById('titulo').innerHTML="mamas";
+</script>   
