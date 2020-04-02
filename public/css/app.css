@@ -10917,3 +10917,11 @@ a.text-dark:focus {
   margin-top: 10px;
 }
 
+form.form-delete {
+  display: inline;
+}
+
+form.form-delete .btn {
+  padding: 7px 12px;
+}
+
