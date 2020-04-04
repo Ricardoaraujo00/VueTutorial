@@ -82,7 +82,6 @@
             <div class="content">
                 <div class="title m-b-md" id="titulo">
                     Laravel
-                    Well, i just changed this for a commit... And changed again... And again...+11
                 </div>
 
                 <div class="links">
