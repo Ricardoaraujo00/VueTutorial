@@ -52,6 +52,6 @@
         'answers'=>$question->answers,
         'answerscount'=>$question->answerscount
     ])
-    @include('answers.create')
+    @include('answers._create')
 </div>
 @endsection

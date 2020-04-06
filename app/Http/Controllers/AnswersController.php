@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Question;
 use Illuminate\Support\Facades\Auth;
 
+use App\Answer;
+
 class AnswersController extends Controller
 {
   
@@ -18,15 +20,15 @@ class AnswersController extends Controller
      */
     public function store(Question $question, Request $request)
     {
-         $request->validate([
-             'body' => 'required'
-         ]);
-         $question->answers()->create(['body'=> $request->body, 'user_id'=>Auth::id()]);
+        //  $request->validate([
+        //      'body' => 'required'
+        //  ]);
+        //  $question->answers()->create(['body'=> $request->body, 'user_id'=>Auth::id()]);
 
         
-        // $question->answers()->create($request->validate([
-        //     'body' => 'required'
-        // ])+['user_id'=>Auth::id()]);
+        $question->answers()->create($request->validate([
+            'body' => 'required'
+        ])+['user_id'=>Auth::id()]);
 
         return back()->with('success', "Your answer has been submited successfully");
     }
@@ -39,9 +41,10 @@ class AnswersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Question $question, Answer $answer)
     {
-        //
+        $this->authorize('update',$answer);
+        return view('answers.edit', compact('question','answer'));
     }
 
     /**
@@ -51,9 +54,13 @@ class AnswersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Question $question, Answer $answer)
     {
-        //
+        $this->authorize('update',$answer);
+        $answer->update($request->validate([
+            'body'=>'required',
+        ]));
+        return redirect()->route('questions.show', $question->slug) -> with('success', 'Your answer has been updated');
     }
 
     /**
