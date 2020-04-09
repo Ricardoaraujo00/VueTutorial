@@ -15,7 +15,7 @@
                                 <i class="fa fa-caret-up fa-3x"></i>
                             </a>
                             <span class="votes-count">1230</span>
-                            <a title="This question is not usefull" class="vote-down off">
+                            <a title="This question is not usefull" class="vote-down">
                                 <i class="fas fa-caret-down  fa-3x"></i>
                             </a>
                             @can ('accept',$answer)
