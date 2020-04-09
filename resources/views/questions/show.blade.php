@@ -17,7 +17,7 @@
                     <hr>
                     <div class="media">
                         <div class="d-flex flex-column vote-controls">
-                            <a title="This answer is usefull" 
+                            <a title="This question is usefull" 
                                 class="vote-up {{Auth::guest() ? 'off' : ''}}"
                                 onclick="event.preventDefault(); document.getElementById('up-vote-question-{{$question->id}}').submit();">
                                 <i class="fa fa-caret-up fa-3x"></i>
@@ -26,8 +26,8 @@
                                 @csrf
                                 <input type="hidden" name="vote" value="1">
                             </form>
-                        <span class="votes-count">{{$question->votes_count}}</span>
-                            <a title="This answer is not usefull" 
+                            <span class="votes-count">{{$question->votes_count}}</span>
+                            <a title="This question is not usefull" 
                             class="vote-down {{Auth::guest() ? 'off' : ''}}"
                             onclick="event.preventDefault(); document.getElementById('down-vote-question-{{$question->id}}').submit();">
                                 <i class="fas fa-caret-down  fa-3x"></i>
@@ -72,6 +72,9 @@
         'answers'=>$question->answers,
         'answerscount'=>$question->answerscount
     ])
-    @include('answers._create')
+    @if (Auth::user())
+        @include('answers._create')
+    @endif
+    
 </div>
 @endsection
