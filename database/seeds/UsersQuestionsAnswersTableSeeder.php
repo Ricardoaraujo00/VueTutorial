@@ -12,7 +12,7 @@ class UsersQuestionsAnswersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('question')->delete();
+        DB::table('questions')->delete();
         DB::table('answers')->delete();
         DB::table('users')->delete();
 

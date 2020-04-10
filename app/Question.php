@@ -47,7 +47,7 @@ class Question extends Model
 
     public function answers()
     {
-        return $this->hasMany(Answer::class);
+        return $this->hasMany(Answer::class)->orderBy('votes_count','DESC');
     }
 
     public function acceptBestAnswer(Answer $answer)
@@ -78,6 +78,11 @@ class Question extends Model
 
     public function getExcerptAttribute($lenght)
     {
+        if ($lenght !== 20){
+            $lenght=250;
+        }
+        
+
         return $this->excerpt($lenght);
     }
 

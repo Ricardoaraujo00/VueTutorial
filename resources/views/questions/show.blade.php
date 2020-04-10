@@ -37,9 +37,10 @@
             </div>
         </div>
     </div>
+
     @include('answers._index',[
         'answers'=>$question->answers,
-        'answerscount'=>$question->answerscount
+        'answerscount'=>$question->answers->Count()
     ])
     @if (Auth::user())
         @include('answers._create')
