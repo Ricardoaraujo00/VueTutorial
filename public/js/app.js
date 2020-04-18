@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"UserInfoComponent":"UserInfoComponent"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"AnswerComponent":"AnswerComponent","UserInfoComponent":"UserInfoComponent"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -49447,6 +49447,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('user-info', function () {
   return __webpack_require__.e(/*! import() | UserInfoComponent */ "UserInfoComponent").then(__webpack_require__.bind(null, /*! ./components/UserInfo.vue */ "./resources/js/components/UserInfo.vue"));
+});
+Vue.component('answer', function () {
+  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Answer.vue */ "./resources/js/components/Answer.vue"));
 });
 /**
  * Next, we will create a fresh Vue application instance and attach it to
