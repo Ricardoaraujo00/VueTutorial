@@ -23,7 +23,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
-Vue.component('answer', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Answer.vue'));
+Vue.component('answer-edit', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Answer.vue'));
+//Vue.component('answer', require('./components/Answer.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
