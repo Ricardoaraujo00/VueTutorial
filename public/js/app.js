@@ -49448,9 +49448,10 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('user-info', function () {
   return __webpack_require__.e(/*! import() | UserInfoComponent */ "UserInfoComponent").then(__webpack_require__.bind(null, /*! ./components/UserInfo.vue */ "./resources/js/components/UserInfo.vue"));
 });
-Vue.component('answer', function () {
+Vue.component('answer-edit', function () {
   return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Answer.vue */ "./resources/js/components/Answer.vue"));
-});
+}); //Vue.component('answer', require('./components/Answer.vue'));
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49507,6 +49508,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+// let token = document.head.querySelector('meta[name="csrf-token"]');
+// if (token) {
+//     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+// } else {
+//     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+// }
 
 /***/ }),
 
