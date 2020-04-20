@@ -50118,6 +50118,9 @@ Vue.component('answer-edit', function () {
 });
 Vue.component('favorite', function () {
   return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Favorite.vue */ "./resources/js/components/Favorite.vue"));
+});
+Vue.component('accept', function () {
+  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Accept.vue */ "./resources/js/components/Accept.vue"));
 }); //Vue.component('answer', require('./components/Answer.vue'));
 
 /**
