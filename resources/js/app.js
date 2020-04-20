@@ -30,6 +30,7 @@ Vue.use(VueIziToast);
 
 Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
 Vue.component('answer-edit', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Answer.vue'));
+Vue.component('favorite', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Favorite.vue'));
 //Vue.component('answer', require('./components/Answer.vue'));
 
 /**

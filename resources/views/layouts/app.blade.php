@@ -76,6 +76,12 @@
         </main>
     </div>
     <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+    <script>
+        Window.Auth = {!!  json_encode([
+            'signedIn' => Auth::check(),
+            'user' => Auth::user()
+        ])!!}
+    </script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
