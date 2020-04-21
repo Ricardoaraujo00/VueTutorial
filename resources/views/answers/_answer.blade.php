@@ -1,4 +1,4 @@
-<answer-edit :answer="{{$answer}}" inline-template>
+<answer :answer="{{$answer}}" inline-template>
     <div class="media post">
     <vote :model="{{$answer}}" name="answer"></vote>
         <div class="media-body">
@@ -32,4 +32,4 @@
             </div>
         </div>
     </div>
-</answer-edit>
+</answer>

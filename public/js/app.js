@@ -50116,11 +50116,11 @@ Vue.use(_authorization_authorize__WEBPACK_IMPORTED_MODULE_2__["default"]);
 Vue.component('user-info', function () {
   return __webpack_require__.e(/*! import() | UserInfoComponent */ "UserInfoComponent").then(__webpack_require__.bind(null, /*! ./components/UserInfo.vue */ "./resources/js/components/UserInfo.vue"));
 });
-Vue.component('answer-edit', function () {
-  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Answer.vue */ "./resources/js/components/Answer.vue"));
-});
 Vue.component('vote', function () {
   return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Vote.vue */ "./resources/js/components/Vote.vue"));
+});
+Vue.component('answers', function () {
+  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Answers.vue */ "./resources/js/components/Answers.vue"));
 }); //Vue.component('answer', require('./components/Answer.vue'));
 
 /**
