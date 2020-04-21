@@ -23,7 +23,6 @@ export default {
             this.editing=false;
         },
         update(){
-            console.log("merda");
             axios.patch(this.endpoint,{
                 body: this.body
             })

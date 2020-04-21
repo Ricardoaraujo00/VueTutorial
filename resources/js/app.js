@@ -32,8 +32,7 @@ Vue.use(Authorization);
 
 Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
 Vue.component('answer-edit', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Answer.vue'));
-Vue.component('favorite', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Favorite.vue'));
-Vue.component('accept', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Accept.vue'));
+Vue.component('vote', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Vote.vue'));
 //Vue.component('answer', require('./components/Answer.vue'));
 
 /**
