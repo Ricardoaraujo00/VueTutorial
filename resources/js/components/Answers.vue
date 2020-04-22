@@ -29,6 +29,8 @@ import NewAnswer from './NewAnswer.vue';
 export default {
     props: ['question'],
 
+    components: { Answer, NewAnswer},
+
     data () {
         return {
             questionId: this.question.id,

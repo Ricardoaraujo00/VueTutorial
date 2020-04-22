@@ -31,8 +31,12 @@
 </template>
 
 <script>
+import Vote from './Vote.vue';
+import UserInfo from './UserInfo.vue';
 export default {
     props: ['answer'],
+
+    components: {Vote, UserInfo},
 
     data () {
         return {
@@ -80,7 +84,6 @@ export default {
                 position: 'center',
                 buttons: [
                     ['<button><b>YES</b></button>', (instance, toast) => {
-
                             axios.delete(this.endpoint)
                             .then (res => {
                                 // $(this.$el).fadeOut(500, () => {

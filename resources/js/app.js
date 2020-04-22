@@ -30,10 +30,10 @@ Vue.use(Authorization);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
+//Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
+//Vue.component('vote', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Vote.vue'));
+Vue.component('question-page', () => import(/* webpackChunkName: "AnswerComponent" */ './pages/QuestionPage.vue'));
 
-Vue.component('vote', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Vote.vue'));
-Vue.component('answers', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Answers.vue'));
 //Vue.component('answer', require('./components/Answer.vue'));
 
 /**

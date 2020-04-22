@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"AnswerComponent":"AnswerComponent","UserInfoComponent":"UserInfoComponent"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"AnswerComponent":"AnswerComponent"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -50112,15 +50112,11 @@ Vue.use(_authorization_authorize__WEBPACK_IMPORTED_MODULE_2__["default"]);
  */
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+//Vue.component('user-info', () => import(/* webpackChunkName: "UserInfoComponent" */ './components/UserInfo.vue'));
+//Vue.component('vote', () => import(/* webpackChunkName: "AnswerComponent" */ './components/Vote.vue'));
 
-Vue.component('user-info', function () {
-  return __webpack_require__.e(/*! import() | UserInfoComponent */ "UserInfoComponent").then(__webpack_require__.bind(null, /*! ./components/UserInfo.vue */ "./resources/js/components/UserInfo.vue"));
-});
-Vue.component('vote', function () {
-  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Vote.vue */ "./resources/js/components/Vote.vue"));
-});
-Vue.component('answers', function () {
-  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./components/Answers.vue */ "./resources/js/components/Answers.vue"));
+Vue.component('question-page', function () {
+  return __webpack_require__.e(/*! import() | AnswerComponent */ "AnswerComponent").then(__webpack_require__.bind(null, /*! ./pages/QuestionPage.vue */ "./resources/js/pages/QuestionPage.vue"));
 }); //Vue.component('answer', require('./components/Answer.vue'));
 
 /**
@@ -50182,6 +50178,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   accept: function accept(user, answer) {
     return user.id === answer.question.user_id;
+  },
+  deleteQuestion: function deleteQuestion(user, question) {
+    return user.id === question.user_id && question.answers_count < 1;
   }
 });
 
