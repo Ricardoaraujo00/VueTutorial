@@ -36,9 +36,5 @@
 
     <answers :question="{{$question}}"></answers> 
 
-    @if (Auth::user())
-        @include('answers._create')
-    @endif
-    
 </div>
 @endsection
